@@ -26,7 +26,6 @@ body {
 .top {
     grid-area: top;
     background-color: #B93A64;
-    background-image: url("images/top-background.jpg");
     color: #fff;
     display: flex;
     flex-direction: column;
