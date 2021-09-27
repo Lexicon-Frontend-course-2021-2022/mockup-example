@@ -94,6 +94,7 @@ a.active {
 }
 
 .content {
+    background-color: #f2f2f2;
     grid-area: content;
     display: flex;
     flex-direction: column;
