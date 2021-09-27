@@ -2,7 +2,7 @@ body {
     height: 100vh;
     margin: 0;
     display: grid;
-    grid-template-rows: 640px auto 640px 225px 42px;
+    grid-template-rows: 640px auto auto 225px 42px;
     grid-template-columns: 1fr;
     grid-template-areas: 
     "top"
@@ -17,7 +17,7 @@ body {
 .top > *,
 .content > *,
 .contact-us > *,
-footer > *,
+.footer > *,
 .copyright > * {
     max-width: 1000px;
     margin: 0;
@@ -48,12 +48,12 @@ footer > *,
     text-transform: uppercase;
 }
 
-.top nav a {
+a {
     text-decoration: none;
     color: #fff;
 }
 
-.top nav a.active {
+a.active {
     text-decoration: underline;
     color: #fff;
 }
@@ -187,7 +187,6 @@ footer > *,
     grid-area: contact-us;
     background-color: #b93a64;
     color: #fff;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -197,6 +196,7 @@ footer > *,
     padding: 2rem 0 1rem 0;
     width: 100%;
     text-align: center;
+    padding-bottom: 3rem;
 }
 
 
@@ -205,30 +205,46 @@ footer > *,
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
+    margin-bottom: 3rem;
 }
 
-.contact-us div .column {
+.column {
     display: grid;
-    grid-template-rows: 3rem 3rem 5rem 3rem;
-    grid-template-columns: 100%;
     row-gap: 1rem;
-
-    /* background-color: darkgray; */
 }
 
+.contact-us div .left-column {
+    display: grid;
+    grid-template-rows: 4rem 4rem 7rem 4rem;
+    grid-template-columns: 100%;
+}
+
+.contact-us div .right-column {
+    grid-template-rows: auto auto;
+    grid-template-columns: 100%;
+
+}
+
+.right-column img {
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+.right-column p {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+    font-size: 1.25rem;
+}
 input {
     font-family: serif;
     font-size: 1.5rem;
-    color: #eee;
+    color: #fff;
     width: 100%;
     height: 100%;
     border: 0;
     border-radius: 0.25rem;
-    padding: 0 1rem;
-}
-
-#input-email {
-    color: #000;
 }
 
 button {
@@ -243,12 +259,52 @@ button {
 
 }
 
-footer {
+.footer {
     grid-area: footer;
-    background-color: darkcyan;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .footer-upper {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.footer .footer-upper > * {
+    padding: 0 2rem;
+}
+
+
+.footer .footer-lower {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.icon {
+    height: 50px;
+    padding: 0 2rem;
 }
 
 .copyright {
     grid-area: copyright;
-    background-color: green;
+    background-color: #2E2E2E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: #555
 }
