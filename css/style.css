@@ -118,11 +118,9 @@ a.active {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-}
-
-.content .meet-our-team article {
     margin: 0;
 }
+
 
 .content .meet-our-team article img {
     width: 85%;
